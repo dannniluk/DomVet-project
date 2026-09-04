@@ -1,6 +1,7 @@
 import React from 'react';
 import { CLINIC_INFO, DOCTORS, POPULAR_PRICES, REVIEWS_DATA, CLINIC_GALLERY } from '../data/clinicData';
 import { ViewMode, Doctor } from '../types';
+import { resolveAssetPath } from '../utils/assetPath';
 import { ArrowRight, Phone, Clock, MapPin, Check, Star } from 'lucide-react';
 
 interface HomePageProps {
@@ -423,7 +424,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div>
                   <div className="aspect-4/5 rounded-xl overflow-hidden bg-[#D8D8D4] mb-4">
                     <img
-                      src={doc.image}
+                      src={resolveAssetPath(doc.image)}
                       alt={doc.name}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.015]"
                       referrerPolicy="no-referrer"

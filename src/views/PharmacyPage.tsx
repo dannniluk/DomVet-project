@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { PHARMACY_PRODUCTS, PHARMACY_CATEGORIES } from '../data/pharmacyData';
 import { PharmacyProduct } from '../types';
+import { resolveAssetPath } from '../utils/assetPath';
 import {
   Search,
   X,
@@ -33,7 +34,7 @@ const ProductCardImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) 
 
   return (
     <img
-      src={src}
+      src={resolveAssetPath(src)}
       alt={alt}
       loading="lazy"
       onError={() => setHasError(true)}

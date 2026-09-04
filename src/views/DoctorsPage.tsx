@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { DOCTORS, CLINIC_INFO } from '../data/clinicData';
 import { Doctor } from '../types';
+import { resolveAssetPath } from '../utils/assetPath';
 import { Award, Clock, ArrowRight, Calendar, GraduationCap } from 'lucide-react';
 
 interface DoctorsPageProps {
@@ -84,7 +85,7 @@ export const DoctorsPage: React.FC<DoctorsPageProps> = ({
                     className="aspect-4/5 w-full overflow-hidden bg-[#D8D8D4] cursor-pointer relative"
                   >
                     <img
-                      src={doc.image}
+                      src={resolveAssetPath(doc.image)}
                       alt={doc.name}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.015]"
                       referrerPolicy="no-referrer"
