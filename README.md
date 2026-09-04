@@ -18,6 +18,6 @@ npm run build
 
 ## GitHub Pages
 
-Публикация выполняется автоматически workflow из `.github/workflows/deploy-pages.yml` после push в `main`.
+Публикация выполняется из ветки `gh-pages`. Исходники и настройки сборки находятся в `main`, а собранная папка `dist/` публикуется в `gh-pages`.
 
 Сайт: https://dannniluk.github.io/DomVet-project/
