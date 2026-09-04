@@ -1,11 +1,23 @@
-<div align="center">
+# DOMVET — ветеринарная клиника на Ленинском
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Сайт клиники на React, TypeScript и Vite.
 
-  <h1>Built with AI Studio</h2>
+## Локальный запуск
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+```bash
+npm install
+npm run dev
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+Проверки перед публикацией:
 
-</div>
+```bash
+npm run lint
+npm run build
+```
+
+## GitHub Pages
+
+Публикация выполняется из ветки `gh-pages`. Исходники и настройки сборки находятся в `main`, а собранная папка `dist/` публикуется в `gh-pages`.
+
+Сайт: https://dannniluk.github.io/DomVet-project/
