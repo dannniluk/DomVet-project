@@ -1,5 +1,6 @@
 import React from 'react';
 import { Doctor } from '../types';
+import { resolveAssetPath } from '../utils/assetPath';
 import { X, Calendar, Award, GraduationCap, Clock } from 'lucide-react';
 
 interface DoctorDetailModalProps {
@@ -39,7 +40,7 @@ export const DoctorDetailModal: React.FC<DoctorDetailModalProps> = ({
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
           <div className="w-full sm:w-48 shrink-0 aspect-4/5 rounded-xl overflow-hidden bg-[#D8D8D4]">
             <img
-              src={doctor.image}
+              src={resolveAssetPath(doctor.image)}
               alt={doctor.name}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

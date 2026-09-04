@@ -1,6 +1,7 @@
 import React from 'react';
 import { DOCTORS, ALL_PRICES, CLINIC_INFO } from '../data/clinicData';
 import { Doctor } from '../types';
+import { resolveAssetPath } from '../utils/assetPath';
 import { Check, AlertCircle, Phone, ArrowRight, Shield } from 'lucide-react';
 
 interface ExoticsPageProps {
@@ -124,7 +125,7 @@ export const ExoticsPage: React.FC<ExoticsPageProps> = ({
           <div className="bg-[#FAF8F4] p-6 sm:p-8 rounded-2xl border border-[#171B18]/10 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
             <div className="w-32 sm:w-40 aspect-4/5 rounded-xl overflow-hidden bg-[#D8D8D4] shrink-0">
               <img
-                src={exoticDoctor.image}
+                src={resolveAssetPath(exoticDoctor.image)}
                 alt={exoticDoctor.name}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

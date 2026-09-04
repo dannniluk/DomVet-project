@@ -1,6 +1,7 @@
 import React from 'react';
 import { SERVICES_DATA } from '../data/clinicData';
 import { ViewMode } from '../types';
+import { resolveAssetPath } from '../utils/assetPath';
 import { ArrowRight, Check } from 'lucide-react';
 
 interface ServicesPageProps {
@@ -49,7 +50,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                     className="aspect-16/9 overflow-hidden bg-[#D8D8D4] cursor-pointer"
                   >
                     <img
-                      src={service.image}
+                      src={resolveAssetPath(service.image)}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.015]"
                       referrerPolicy="no-referrer"

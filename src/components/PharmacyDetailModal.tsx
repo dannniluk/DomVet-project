@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { PharmacyProduct } from '../types';
+import { resolveAssetPath } from '../utils/assetPath';
 import { X, Package, ShieldCheck, MapPin, Clock, Phone, ArrowRight } from 'lucide-react';
 
 interface PharmacyDetailModalProps {
@@ -49,7 +50,7 @@ export const PharmacyDetailModal: React.FC<PharmacyDetailModalProps> = ({
           <div className="w-full sm:w-56 shrink-0 aspect-square rounded-xl overflow-hidden bg-white border border-[#171B18]/10 flex items-center justify-center p-2 relative">
             {product.image ? (
               <img
-                src={product.image}
+                src={resolveAssetPath(product.image)}
                 alt={product.name}
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"

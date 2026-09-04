@@ -1,6 +1,7 @@
 import React from 'react';
 import { SERVICES_DATA, DOCTORS, ALL_PRICES, CLINIC_INFO } from '../data/clinicData';
 import { ServiceCategory, Doctor, ViewMode } from '../types';
+import { resolveAssetPath } from '../utils/assetPath';
 import { ArrowLeft, CheckCircle2, AlertCircle, Phone, Calendar, ArrowRight } from 'lucide-react';
 
 interface ServiceDetailPageProps {
@@ -80,7 +81,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
             <div className="lg:col-span-5">
               <div className="aspect-4/3 rounded-2xl overflow-hidden bg-[#D8D8D4] shadow-sm">
                 <img
-                  src={service.image}
+                  src={resolveAssetPath(service.image)}
                   alt={service.title}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -193,7 +194,7 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({
                     >
                       <div className="w-12 h-14 rounded-md overflow-hidden bg-[#D8D8D4] shrink-0">
                         <img
-                          src={doc.image}
+                          src={resolveAssetPath(doc.image)}
                           alt={doc.name}
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"
